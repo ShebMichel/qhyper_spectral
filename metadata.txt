@@ -1,0 +1,47 @@
+# This file contains metadata for your plugin.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=Qhyper Spectral
+qgisMinimumVersion=3.0
+description=This plugin import and analyze hyper spectral data
+version=0.1
+author=DMN Solutions
+email=michel.nzikou@alumni.uleth.ca
+
+about=Load and analysed hyper spectral data
+
+tracker=https://github.com/ShebMichel/QhyperSpectral/issues
+repository=https://github.com/ShebMichel/QhyperSpectral
+# End of mandatory metadata
+
+# Recommended items:
+
+hasProcessingProvider=no
+# Uncomment the following line and add your changelog:
+# changelog=
+
+# Tags are comma separated with spaces allowed
+tags=python, hyper spectral data
+
+homepage=https://github.com/ShebMichel/QhyperSpectral
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
+# Since QGIS 3.8, a comma separated list of plugins to be installed
+# (or upgraded) can be specified.
+# Check the documentation for more information.
+# plugin_dependencies=
+
+Category of the plugin: Raster, Vector, Database or Web
+# category=
+
+# If the plugin can run on QGIS Server.
+server=False
+
