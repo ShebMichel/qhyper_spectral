@@ -26,11 +26,12 @@ import os
 
 from qgis.PyQt import uic
 from qgis.PyQt import QtWidgets
-from .basics import run_all
+from .scripts.basics import load_the_data, select_folder
 
 # This loads your .ui file so that PyQt can populate your plugin with the elements from Qt Designer
-FORM_CLASS, _ = uic.loadUiType(os.path.join(
-    os.path.dirname(__file__), 'qhyper_spectral_dialog_base.ui'))
+FORM_CLASS, _ = uic.loadUiType(
+    os.path.join(os.path.dirname(__file__), "qhyper_spectral_dialog_base.ui")
+)
 
 
 class QhyperSpectralDialog(QtWidgets.QDialog, FORM_CLASS):
@@ -44,4 +45,17 @@ class QhyperSpectralDialog(QtWidgets.QDialog, FORM_CLASS):
         # #widgets-and-dialogs-with-auto-connect
         self.setupUi(self)
         ###
-        self.load_pbutton.clicked.connect(run_all(self))
+        username = "Michel"
+        self.FolderSearch_Button.clicked.connect(self.select_the_project_path)
+        self.load_data_button.clicked.connect(self.load_data_into_the_engine)
+        ###
+
+    def select_the_project_path(self):
+        _ = select_folder(self)
+
+        return
+
+    def load_data_into_the_engine(self):
+        _=load_the_data(self)
+        # la suite c de creeer un qpushbutton pour selection le type a visualiser et ou a decrire
+        return
